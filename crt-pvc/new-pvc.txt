@@ -1,0 +1,9 @@
+Need to change
+name			->	Your storage name
+storageClassName	->	tanzu storage policy
+storage			->	Storage size 
+
+Run
+kubectl apply -f new-pvc.yaml
+
+

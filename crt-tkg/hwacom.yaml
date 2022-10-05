@@ -1,0 +1,20 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tanzu-kubernet-cluster
+spec:
+  distribution:
+    version: v1.21
+  topology:
+    controlPlane:
+      class: guaranteed-small
+      count: 1
+      storageClass: tanzu-storage-p
+    workers:
+      class: guaranteed-small
+      count: 1
+      storageClass: tanzu-storage-p
+  settings:
+    storage:
+      classes: ["tanzu-storage-p"]              #Named PVC storage classes
+      defaultClass:  tanzu-storage-p   #Default PVC storage class
