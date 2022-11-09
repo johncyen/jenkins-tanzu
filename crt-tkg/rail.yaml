@@ -2,7 +2,7 @@ apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
   name: tanzu-kubernet-cluster
-  namespace: tanzu-test-by-patrick
+  namespace: ns-tanzu
 spec:
   topology:
     controlPlane:
@@ -11,13 +11,13 @@ spec:
       storageClass: avi-policy
       tkr: 
         reference:
-          name: v1.20.7---vmware.1-tkg.1.7fb9067
+          name: v1.21.6---vmware.1-tkg.1.b3d708a
     nodePools:
-    - name: worker-pool-1
+    - name: worker-pool
       vmClass: guaranteed-small
       replicas: 1
       storageClass: avi-policy
       tkr: 
         reference:
-          name: v1.20.7---vmware.1-tkg.1.7fb9067
+          name: v1.21.6---vmware.1-tkg.1.b3d708a
       
