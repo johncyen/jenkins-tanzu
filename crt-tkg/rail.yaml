@@ -4,7 +4,7 @@ metadata:
   name: tanzu-kubernet-cluster
 spec:
   distribution:
-    version: v1.2
+    version: v1.20
   topology:
     controlPlane:
       class: guaranteed-small
