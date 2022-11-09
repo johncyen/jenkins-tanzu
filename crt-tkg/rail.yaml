@@ -11,7 +11,7 @@ spec:
       storageClass: avi-policy
       tkr: 
         reference:
-          name: v1.21.6---vmware.1-tkg.1.b3d708a
+          name: v1.16.8---vmware.1-tkg.3.60d2ffd
     nodePools:
     - name: worker-pool
       vmClass: guaranteed-small
@@ -19,5 +19,5 @@ spec:
       storageClass: avi-policy
       tkr: 
         reference:
-          name: v1.21.6---vmware.1-tkg.1.b3d708a
+          name: v1.16.8---vmware.1-tkg.3.60d2ffd
       
