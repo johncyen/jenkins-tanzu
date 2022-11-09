@@ -1,20 +1,24 @@
-apiVersion: run.tanzu.vmware.com/v1alpha1
+apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
   name: tanzu-kubernet-cluster
+  namespace: tanzu-test-by-patrick
 spec:
   distribution:
     version: v1.22
   topology:
     controlPlane:
-      class: guaranteed-small
-      count: 1
+      vmClass: guaranteed-small
+      replicas: 1
       storageClass: avi-policy
-    workers:
-      class: guaranteed-small
-      count: 1
+      tkr: 
+        reference:
+          name: v1.20.7---vmware.1-tkg.1.7fb9067
+    nodePools:
+      vmClass: guaranteed-small
+      replicas: 1
       storageClass: avi-policy
-  settings:
-    storage:
-      classes: ["avi-policy"]              #Named PVC storage classes
-      defaultClass:  avi-policy   #Default PVC storage class
+      tkr: 
+        reference:
+          name: v1.20.7---vmware.1-tkg.1.7fb9067
+      
