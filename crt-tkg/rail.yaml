@@ -4,8 +4,6 @@ metadata:
   name: tanzu-kubernet-cluster
   namespace: tanzu-test-by-patrick
 spec:
-  distribution:
-    version: v1.22
   topology:
     controlPlane:
       vmClass: guaranteed-small
