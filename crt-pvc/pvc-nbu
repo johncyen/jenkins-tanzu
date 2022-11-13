@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-nbu
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: avi-policy
+  resources:
+    requests:
+        storage: 20Gi
