@@ -1,8 +1,8 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: tanzu-kubernet-cluster
-  namespace: ns-tanzu
+  name: dev-nub
+  namespace: ns-dev-nbu
 spec:
   topology:
     controlPlane:
