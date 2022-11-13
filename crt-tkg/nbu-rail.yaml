@@ -1,0 +1,22 @@
+apiVersion: run.tanzu.vmware.com/v1alpha2
+kind: TanzuKubernetesCluster
+metadata:
+  name: tanzu-kubernet-cluster
+  namespace: ns-tanzu
+spec:
+  topology:
+    controlPlane:
+      vmClass: best-effort-xsmall
+      replicas: 1
+      storageClass: avi-policy
+      tkr: 
+        reference:
+          name: v1.20.2---vmware.1-tkg.2.3e10706
+    nodePools:
+    - name: worker-pool
+      vmClass: best-effort-xsmall
+      replicas: 1
+      storageClass: avi-policy
+      tkr: 
+        reference:
+          name: v1.20.2---vmware.1-tkg.2.3e10706
